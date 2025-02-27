@@ -7,3 +7,5 @@ preview:
 with custom Taskbar height and icon size (16,35,33)
 
 ![image](https://github.com/user-attachments/assets/e00f1065-b04d-49cb-83a3-b3ca49a569f4)
+
+In addition, I use windhawk mods like Windows 11 Notification Center styler with TranslucentShell and the Windows 11 Start Menu styler with TranslucentStartMenu
