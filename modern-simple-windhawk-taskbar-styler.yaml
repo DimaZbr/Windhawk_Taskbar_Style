@@ -1,0 +1,297 @@
+theme: ''
+styleConstants:
+  - ''
+controlStyles:
+  - target: Taskbar.TaskListLabeledButtonPanel@RunningIndicatorStates > Rectangle#RunningIndicator
+    styles:
+      - Width=0
+      - Width@ActiveRunningIndicator=0
+      - Height@ActiveRunningIndicator=0
+  - target: Taskbar.ExperienceToggleButton#LaunchListButton[AutomationProperties.AutomationId=StartButton]
+    styles:
+      - Visibility=Collapsed
+  - target: Taskbar.TaskbarFrame > Grid#RootGrid > Taskbar.TaskbarBackground > Grid > Rectangle#BackgroundFill
+    styles:
+      - Fill:=<SolidColorBrush Color="{ThemeResource TextFillColorInverse}"  Opacity="0.0" />
+  - target: SystemTray.NotifyIconView#NotifyItemIcon[AutomationProperties.Name=Bluetooth Devices] > Grid#ContainerGrid > ContentPresenter#ContentPresenter > Grid#ContentGrid > SystemTray.ImageIconContent > Grid#ContainerGrid > Image
+    styles:
+      - Visibility=1
+  - target: SystemTray.NotifyIconView#NotifyItemIcon[AutomationProperties.Name=Safely Remove Hardware and Eject Media] > Grid#ContainerGrid > ContentPresenter#ContentPresenter > Grid#ContentGrid > SystemTray.ImageIconContent > Grid#ContainerGrid > Image
+    styles:
+      - Visibility=1
+  - target: SystemTray.NotifyIconView#NotifyItemIcon[AutomationProperties.Name=Bluetooth Devices] > Grid#ContainerGrid > ContentPresenter#ContentPresenter
+    styles:
+      - Content:=<FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE702;" FontSize="16"/>
+      - Foreground:=<SolidColorBrush Color="{ThemeResource Accent1}" />
+      - Canvas.ZIndex=-1
+  - target: SystemTray.NotifyIconView#NotifyItemIcon[AutomationProperties.Name=Safely Remove Hardware and Eject Media] > Grid#ContainerGrid > ContentPresenter#ContentPresenter
+    styles:
+      - Content:=<FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE88E;" FontSize="16"/>
+      - Foreground:=<SolidColorBrush Color="{ThemeResource Accent1}" />
+      - Canvas.ZIndex=-1
+  - target: SystemTray.OmniButton#ControlCenterButton
+    styles:
+      - Grid.Column=4
+      - CornerRadius=$InnerRadius
+  - target: SystemTray.OmniButton#NotificationCenterButton
+    styles:
+      - Grid.Column=5
+      - CornerRadius=$InnerRadius
+  - target: SystemTray.Stack#MainStack
+    styles:
+      - Grid.Column=6
+      - CornerRadius=$InnerRadius
+  - target: SystemTray.Stack#ShowDesktopStack
+    styles:
+      - CornerRadius=$InnerRadius
+      - Grid.Column=7
+      - Width=5
+  - target: SystemTray.Stack#NonActivatableStack
+    styles:
+      - Grid.Column=2
+  - target: TextBlock#InnerTextBlock[Text=]
+    styles:
+      - Text=
+  - target: Taskbar.TaskbarFrame > Grid#RootGrid > Taskbar.TaskbarBackground > Grid > Rectangle#BackgroundFill
+    styles:
+      - Fill:=<SolidColorBrush Color="{ThemeResource TextFillColorInverse}"  Opacity="1.0" />
+  - target: Taskbar.TaskbarFrame > Grid#RootGrid > Taskbar.TaskbarBackground > Grid
+    styles:
+      - Background=Black
+  - target: Grid#ConfirmatorMainGrid
+    styles:
+      - Background:=<SolidColorBrush Color="#FF0A0A0A" />
+      - CornerRadius=10
+      - BorderBrush:=<SolidColorBrush Color="#56757575" />
+      - BorderThickness=1
+      - // Volume & Brightness OSD —
+  - target: Grid#ModalRootGrid > Border#BackgroundElement
+    styles:
+      - Background:=<SolidColorBrush Color="#FF000000" />
+      - CornerRadius=50
+      - BorderThickness=0
+      - // Alt+Tab — внешний фон
+  - target: Grid#ModalRootGrid > Border#BackgroundElement > WindowsInternal.ComposableShell.Experiences.Switcher.SwitchItemList
+    styles:
+      - Background:=<SolidColorBrush Color="#FF000000" />
+      - // Alt+Tab — внутренний фон
+  - target: Windows.UI.Xaml.Hosting.DesktopWindowXamlSource
+    styles:
+      - Background:=<SolidColorBrush Color="#FF000000" />
+      - // Alt+Tab — общий контейнер
+  - target: Taskbar.TaskListLabeledButtonPanel@CommonStates > Image
+    styles:
+      - Opacity@InactiveNormal=0.55
+      - Opacity@InactivePointerOver=0.85
+  - target: Border#OverflowFlyoutBackgroundBorder
+    styles:
+      - Background:=<AcrylicBrush BackgroundSource="Backdrop" TintColor="{ThemeResource SystemChromeMediumColor}" TintOpacity="{ThemeResource bgOpacity}" TintLuminosityOpacity="{ThemeResource bgLuminosity}" FallbackColor="{ThemeResource SystemChromeMediumColor}" />
+      - CornerRadius=10
+      - BorderBrush:=<SolidColorBrush Color="#56757575"/>
+      - BorderThickness=1
+      - // Taskbar Tray Hidden List > Background
+  - target: Border#VirtualDesktopBarBackground
+    styles:
+      - Background:=<AcrylicBrush BackgroundSource="Backdrop" TintColor="{ThemeResource SystemChromeMediumColor}" TintOpacity="{ThemeResource bgOpacity}" TintLuminosityOpacity="{ThemeResource bgLuminosity}" FallbackColor="{ThemeResource SystemChromeMediumColor}" />
+      - CornerRadius=10
+      - BorderBrush:=<SolidColorBrush Color="#56757575"/>
+      - // Win + tab View > Virtual Desktops List Background
+  - target: Border#SnapPickerBorder
+    styles:
+      - Background:=<WindhawkBlur BlurAmount="12" TintColor="{ThemeResource SystemChromeMediumColor}" TintSaturation="1.25" NoiseOpacity="0.1" NoiseDensity="0.8" TintOpacity="0.2" TintLuminosityOpacity="0.3" />
+      - // Window Snapping Arrangement Picker
+  - target: Border#SnapBarBorder
+    styles:
+      - Background:=<WindhawkBlur BlurAmount="12" TintColor="{ThemeResource SystemChromeMediumColor}" TintSaturation="1.25" NoiseOpacity="0.1" NoiseDensity="0.8" TintOpacity="0.2" TintLuminosityOpacity="0.3" />
+      - // Window Snapping Arrangement Window
+  - target: Grid#SystemTrayFrameGrid
+    styles:
+      - Background:=<AcrylicBrush BackgroundSource="Backdrop" TintColor="{ThemeResource SystemChromeMediumColor}" TintOpacity="{ThemeResource bgOpacity}" TintLuminosityOpacity="{ThemeResource bgLuminosity}" FallbackColor="{ThemeResource SystemChromeMediumColor}" />
+      - CornerRadius=10
+      - Margin=0,3,8,3
+      - Padding=4,0,0,0
+      - BorderThickness=1
+      - // Taskbar System Tray (Right Region) Grid > Background
+  - target: Grid#HorizontalTemplate > Rectangle#HorizontalDecreaseRect
+    styles:
+      - Height=6.5
+      - RadiusX=3
+      - RadiusY=3
+      - // Brightness/Volume Popup > Increasing/decreasing slider
+  - target: Grid#HorizontalTemplate > Rectangle#HorizontalTrackRect
+    styles:
+      - Height=6.5
+      - RadiusX=3
+      - RadiusY=3
+      - Opacity=0.5
+      - // Brightness/Volume Popup > Slider Track
+  - target: Grid#VolumeConfirmator > Slider#volumeSlider
+    styles:
+      - Margin=0,-3.5,0,0
+      - Width=120
+      - // Volume Popup > Slider Region Grid
+  - target: Grid#BrightnessConfirmator > Slider#brightnessSlider
+    styles:
+      - Width=135
+      - Margin=0,-2.5,0,0
+      - // Brightness Popup > Slider Region Grid
+  - target: Grid#OverflowRootGrid > Border
+    styles:
+      - // Taskbar Overflow when full > Background
+  - target: Grid#DynamicSearchBoxGleamContainer
+    styles:
+      - Height=30
+      - // Taskbar Search Box > Art container beside search
+  - target: Grid > HyperlinkButton#Footer
+    styles:
+      - HorizontalContentAlignment=1
+  - target: Microsoft.UI.Xaml.Controls.AnimatedIcon#BrightnessIcon
+    styles:
+      - Height=22
+      - Width=22
+  - target: Microsoft.UI.Xaml.Controls.AnimatedIcon#VolumeIcon
+    styles:
+      - Height=18
+      - Width=18
+  - target: SystemTray.NotifyIconView#NotifyItemIcon[AutomationProperties.Name=Bluetooth Devices] > ... > Image
+    styles:
+      - Visibility=1
+  - target: SystemTray.NotifyIconView#NotifyItemIcon[AutomationProperties.Name=Safely Remove Hardware and Eject Media] > ... > Image
+    styles:
+      - Visibility=1
+  - target: SystemTray.NotifyIconView#NotifyItemIcon[AutomationProperties.Name=Bluetooth Devices] > Grid#ContainerGrid > ContentPresenter#ContentPresenter
+    styles:
+      - Content:=<FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE702;" FontSize="16"/>
+      - Foreground:=<SolidColorBrush Color="{ThemeResource Accent1}" />
+      - Canvas.ZIndex=-1
+  - target: SystemTray.NotifyIconView#NotifyItemIcon[AutomationProperties.Name=Safely Remove Hardware and Eject Media] > Grid#ContainerGrid > ContentPresenter#ContentPresenter
+    styles:
+      - Content:=<FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE88E;" FontSize="16"/>
+      - Foreground:=<SolidColorBrush Color="{ThemeResource Accent1}" />
+      - Canvas.ZIndex=-1
+  - target: SystemTray.OmniButton#ControlCenterButton
+    styles:
+      - Grid.Column=4
+      - CornerRadius=8
+  - target: SystemTray.OmniButton#NotificationCenterButton
+    styles:
+      - Grid.Column=5
+      - CornerRadius=8
+  - target: SystemTray.Stack#MainStack
+    styles:
+      - Grid.Column=6
+      - CornerRadius=8
+  - target: SystemTray.Stack#ShowDesktopStack
+    styles:
+      - CornerRadius=8
+      - Grid.Column=7
+      - Width=5
+  - target: SystemTray.Stack#NonActivatableStack
+    styles:
+      - Grid.Column=2
+  - target: Taskbar.ExperienceToggleButton#LaunchListButton[AutomationProperties.AutomationId=TaskViewButton] > Taskbar.TaskListButtonPanel#ExperienceToggleButtonRootPanel
+    styles:
+      - CornerRadius=8
+      - Width=44
+  - target: Taskbar.TaskItemThumbnailView > Grid > Border
+    styles:
+      - CornerRadius=10
+      - Background:=<AcrylicBrush BackgroundSource="Backdrop" TintColor="{ThemeResource SystemChromeMediumColor}" TintOpacity="{ThemeResource bgOpacity}" TintLuminosityOpacity="{ThemeResource bgLuminosity}" FallbackColor="{ThemeResource SystemChromeMediumColor}" />
+      - BorderThickness=1
+      - BorderBrush:=<SolidColorBrush Color="#56757575"/>
+  - target: Taskbar.TaskListButton
+    styles:
+      - CornerRadius=8
+      - Margin=0,-1,0,-1
+      - BorderBrush:=<SolidColorBrush Color="{ThemeResource ControlBorder}" />
+      - BorderThickness=1
+  - target: Taskbar.TaskbarFrame > Grid#RootGrid
+    styles:
+      - Margin=8,3,0,3
+      - CornerRadius=10
+      - Padding=-8,0,0,0
+      - Background:=<AcrylicBrush BackgroundSource="Backdrop" TintColor="{ThemeResource SystemChromeMediumColor}" TintOpacity="{ThemeResource bgOpacity}" TintLuminosityOpacity="{ThemeResource bgLuminosity}" FallbackColor="{ThemeResource SystemChromeMediumColor}" />
+      - BorderThickness=1
+      - HorizontalAlignment=Left
+      - // Taskbar Task Region
+  - target: TextBlock#volumeLevelText
+    styles:
+      - FontSize=15
+      - Margin=0,-1,0,0
+      - FontFamily=Nunito
+      - FontWeight=Normal
+  - target: TextBlock#BatteryTextBlock
+    styles:
+      - FontFamily=Nunito
+      - FontSize=12
+      - FontWeight=Bold
+  - target: ToolTip > ContentPresenter#LayoutRoot
+    styles:
+      - Background:=<AcrylicBrush BackgroundSource="Backdrop" TintColor="{ThemeResource SystemChromeMediumColor}" TintOpacity="0.1" TintLuminosityOpacity="0.8" FallbackColor="{ThemeResource SystemChromeMediumColor}" />
+      - CornerRadius=10
+      - BorderBrush:=<SolidColorBrush Color="#56757575"/>
+      - BorderThickness=1
+      - // Hover popups/tooltips
+  - target: ToolTip > ContentPresenter#LayoutRoot > TextBlock
+    styles:
+      - FontFamily=Nunito
+      - FontWeight=Normal
+      - FontSize=13
+  - target: WindowsInternal.ComposableShell.Experiences.Switcher.SwitchItemListViewItem > Grid#Root > Border#BackgroundBorder
+    styles:
+      - CornerRadius=10
+      - Background:=<AcrylicBrush BackgroundSource="Backdrop" TintColor="{ThemeResource SystemChromeMediumColor}" TintOpacity="{ThemeResource bgOpacity}" TintLuminosityOpacity="{ThemeResource bgLuminosity}" FallbackColor="{ThemeResource SystemChromeMediumColor}" />
+      - BorderBrush:=<SolidColorBrush Color="{ThemeResource ControlBorder}" />
+      - BorderThickness=1
+  - target: WindowsInternal.ComposableShell.Experiences.Switcher.VirtualDesktopElementThemed > Grid#MainGrid > Border#MainBorder
+    styles:
+      - CornerRadius=10
+      - Background:=<SolidColorBrush Color="{ThemeResource Overlay}" />
+  - target: WindowsInternal.ComposableShell.Experiences.TextInput.Common.InputSwitcher > ContentControl > ContentPresenter > Grid
+    styles:
+      - Background:=<AcrylicBrush BackgroundSource="Backdrop" TintColor="{ThemeResource SystemChromeMediumColor}" TintOpacity="{ThemeResource bgOpacity}" TintLuminosityOpacity="{ThemeResource bgLuminosity}" FallbackColor="{ThemeResource SystemChromeMediumColor}" />
+      - BorderBrush:=<SolidColorBrush Color="#56757575"/>
+      - CornerRadius=10
+  - target: Button#GleamEntryPointButton > Border
+    styles:
+      - Height=30
+  - target: ContentPresenter > SearchUx.SearchUI.SearchButtonControl > ... > TextBlock#SearchBoxTextBlock
+    styles:
+      - FontFamily=Nunito
+      - FontWeight=Normal
+      - FontSize=14
+      - RenderTransform:=<TranslateTransform Y="1" />
+  - target: MenuFlyoutPresenter
+    styles:
+      - Background:=<AcrylicBrush BackgroundSource="Backdrop" TintColor="{ThemeResource SystemChromeMediumColor}" TintOpacity="0.1" TintLuminosityOpacity="0.8" FallbackColor="{ThemeResource SystemChromeMediumColor}" />
+      - CornerRadius=10
+      - FontFamily=Nunito
+      - FontWeight=Normal
+      - BorderThickness=1
+      - BorderBrush:=<SolidColorBrush Color="#56757575"/>
+  - target: ScrollViewer > ScrollContentPresenter > Border > Grid
+    styles:
+      - Background:=<WindhawkBlur BlurAmount="5" TintColor="{ThemeResource SystemChromeMediumColor}" TintSaturation="2" NoiseOpacity="0.19" NoiseDensity="0.8" TintOpacity="0.2" TintLuminosityOpacity="0" />
+  - target: SearchUx.SearchUI.SearchButtonRootGrid@CommonStates > Border#BackgroundElement
+    styles:
+      - Background:=<SolidColorBrush Color="#10FFFFFF" />
+      - BorderBrush:=<SolidColorBrush Color="#56757575"/>
+      - BorderThickness=1
+      - CornerRadius=8
+      - Margin=0,-2.5,0,-2.5
+  - target: SystemTray.NotificationAreaIcons#NotificationAreaIcons
+    styles:
+      - Grid.Column=1
+      - CornerRadius=8
+  - target: SystemTray.SystemTrayFrame
+    styles:
+      - HorizontalAlignment=Right
+  - target: Windows.UI.Xaml.Hosting.DesktopWindowXamlSource
+    styles:
+      - Background:=<WindhawkBlur BlurAmount="12" TintColor="{ThemeResource SystemChromeMediumColor}" TintSaturation="1.25" NoiseOpacity="0.1" NoiseDensity="0.8" TintOpacity="0.2" TintLuminosityOpacity="0.3" />
+      - CornerRadius=10
+      - BorderBrush:=<SolidColorBrush Color="#56757575"/>
+      - // Alt Tab View Background
+themeResourceVariables:
+  - ''
+xamlDiagnosticsHandling: ''
